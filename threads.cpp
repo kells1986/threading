@@ -58,13 +58,13 @@ int main()
   second.join();               
   
   double finish = time_please();
-  std::cout << "threads completed in: " << micros_finish - micros_start << std::endl;
+  std::cout << "threads completed in: " << finish - start << std::endl;
 
   start = time_please();
   prime1(large_number1);
   prime1(large_number2);
   finish = time_please();
-  std::cout << "non-threads completed in: " << micros_finish - micros_start << std::endl;
+  std::cout << "non-threads completed in: " << finish - start << std::endl;
 
   return 0;
 }
